@@ -1,0 +1,31 @@
+<%- include('../partials/header.ejs')%>
+<main>
+    <form method = "POST" action="/trades/<%= trade.id%>?_method=PUT">
+        <table>
+            <tr>
+                <td><label for="card">Card name:</label></td>
+                <td><input type="text" id="card" name="card" value = "<%= trade.card%>" class = "fixed-width" required minlength="4"></td>
+            </tr>
+            <tr>
+                <td><label for="tcg">TCG:</label></td>
+                <td><input type="text" id="tcg" name="tcg" value = "<%= trade.tcg%>" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="condition">Card condition:</label></td>
+                <td><input type="text" id="condition" name="condition" value = "<%= trade.condition%>" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="rarity">Card rarity:</label></td>
+                <td><input type="text" id="rarity" name="rarity" value = "<%= trade.rarity%>" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="set">Card set:</label></td>
+                <td><input type="text" id="set" name="set" value = "<%= trade.set%>" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" class = "align-right"><button>Update Trade</button></td>>
+            </tr>
+        </table>
+    </form>
+</main>
+<%- include('../partials/footer.ejs')%>

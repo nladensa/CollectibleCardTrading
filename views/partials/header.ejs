@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Page</title>
+        <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <header class="site">
+            <a href="/">
+            <img src="/images/Project1Logo.png" alt="logo" height="120" width="120">
+            </a>
+
+        <nav>
+            <ul class="float">
+                <li class="inline"><a href="/trades/new">Start Trading!</a></li>
+                <%if(!user) {%>
+                    <li class="inline"></li><a href='/users/new'>Sign Up</a></li>
+                    <li class="inline"></li><a href='/users/login'>Login</a></li>
+                <%} else {%>
+                    <li class="inline"></li><a href='/users/profile'>Profile</a></li>
+                    <li class="inline"></li><a href='/users/logout'>Logout</a></li>
+                <%}%>
+            </ul>
+        </nav>
+        </header>
+
+        <nav class="sub">
+            <ul>
+                <li><a href="/trades">Trades</a></li>
+            </ul>
+        </nav>
+        <% if(errorMessages.length > 0) {%>
+            <% errorMessages.forEach(message=>{%>
+                <div class='error'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>
+        
+        <% if(successMessages.length > 0) {%>
+            <% successMessages.forEach(message=>{%>
+                <div class='success'>
+                    <%=message%>
+                </div>
+             <%});%>
+        <%}%>

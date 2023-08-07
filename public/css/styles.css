@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+header, nav, main, section, footer, aside, label, input {
+    display: block;
+
+}
+
+html, body, h1, h2, h3, ul, li, a, p, footer, header, main, nav, section {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+ul {
+    display: inline;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+li {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+aside {
+    float: right;
+    padding: 20px;
+    margin-top: 10px;
+    
+}
+
+footer {
+    clear: both;
+}
+
+.home {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.site {
+    background-color: #a47e1c;
+    color: black;
+    padding: 10px 20px;
+}
+
+.sub {
+    background-color: #b6b6b4;
+}
+
+.inline {
+    display: inline;
+}
+
+.float {
+    float: right;
+}
+
+.trades {
+    font-weight: normal;
+    padding: 10px 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    padding: 20px;
+}
+
+.desc {
+    font-weight: bold;
+}
+
+.button {
+    display:inline-block;
+    background-color: #b6b6b4;
+    border:0.1em solid black;
+    padding: 2px;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    text-align:center;
+}
+
+.ralign {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.success {
+    background: rgba(108, 192, 112, 0.7);
+    color: #fff;
+    width: 70%;
+    text-align: center;
+    padding: 10px 10px;
+}
+  
+.error {
+    background: rgba(255, 102, 51, 0.7);
+    color: #fff;
+    width: 70%;
+    text-align: center;
+    padding: 10px 10px;
+}

@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs')%>
+    <main>
+        <form action='/trades' method = 'POST'>
+            <h3>New Trade Details:</h3>
+            <table>
+                <tr>
+                    <td><label for="card">Card name:</label></td>
+                    <td><input type="text" id="card" name="card" class = "fixed-width" required minlength="4"></td>
+                </tr>
+                <tr>
+                    <td><label for="tcg">TCG:</label></td>
+                    <td><input type="text" id="tcg" name="tcg" class = "fixed-width" required></td>
+                </tr>
+                <tr>
+                    <td><label for="condition">Card condition:</label></td>
+                    <td><input type="text" id="condition" name="condition" class = "fixed-width" required></td>
+                </tr>
+                <tr>
+                    <td><label for="rarity">Card rarity:</label></td>
+                    <td><input type="text" id="rarity" name="rarity" class = "fixed-width" required></td>
+                </tr>
+                <tr>
+                    <td><label for="set">Card set:</label></td>
+                    <td><input type="text" id="set" name="set" class = "fixed-width" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class = "align-right"><button>Create Trade</button></td>>
+                </tr>
+            </table>
+        </form>
+    </main>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,14 @@
+
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <h2>Welcome, <%=user.firstName%></h2>
+    <%if(trades.length) {%>
+        <h3>Select a trade to view</h3>
+        <%trades.forEach(trade=>{%>
+            <a href = "/trades/<%= trade.id%>"> <p><%= trade.card%></p></a>
+        <%});
+    } else {%>
+        <p>You have not created any trades</p>
+    <%}%>
+    </div>
+    <%- include('../partials/footer.ejs')%>

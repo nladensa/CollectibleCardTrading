@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+            <section>
+                <div class="card">
+                    <h2><%= trade.card%></h2>
+                    <p><%= trade.condition%></p>
+                    <p><%= trade.set%></p>
+                    <p><%= trade.rarity%></p>
+                </div>
+                <div class="desc">
+                    <small>Posted <%= trade.createdAt.toLocaleString()%> by <%= trade.author.firstName + ' ' + trade.author.lastName%></small>
+                </div>
+                <%if(user == trade.author._id) {%>
+                    <form>
+                       <button type = "submit" formmethod = "GET" formaction = "/trades/<%= trade.id%>/edit">Edit</button>
+                       <button type = "submit" formmethod = "POST" formaction = "/trades/<%= trade.id%>?_method=DELETE">Delete</button>
+                    </form>
+                <%}%>
+            </section>
+        
+            <section class="ralign">
+                <p>Interested in this card?</p>
+                <a href="/trades" class="button">Trade</a>
+                <a href="/trades" class="button">Watch</a>
+            </section>
+        </main>
+<%- include('../partials/footer.ejs')%>
